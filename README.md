@@ -2,7 +2,7 @@ Game Of Life
 ============
 A console app in c# that implements Conway's Game of Life Rules and outputs to a
 console screen.
---------------------------------
+
 
 Rules
 -----
