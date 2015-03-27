@@ -33,5 +33,19 @@ namespace GameOfLife
                 Rows.Add(row);
             }
         }
+
+        public List<string> Render(GameOfLifeBoard board)
+        {
+            var renderRow = new List<string>();
+
+            foreach (var row in board.Rows)
+            {
+                int rowLength = row.Count;
+                var print = string.Join("", Enumerable.Repeat("-", rowLength));
+                renderRow.Add(print);
+            }
+
+            return renderRow;
+        }
     }
 }

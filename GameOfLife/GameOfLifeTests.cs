@@ -35,5 +35,20 @@ namespace GameOfLife
         {
            Assert.That(_board.Rows[0][0], Is.TypeOf<Cell>());
         }
+
+        [Test]
+        public void Board_Created_CanBeSeen()
+        {
+            // use the text output console in NUnit to
+            // get a visual representation of the board
+            var output = _board.Render(_board);
+
+            Assert.That(output.First(), Is.EqualTo("----------"));
+
+            foreach (var line in output)
+            {
+                Console.WriteLine(line);
+            }
+        }
     }
 }
