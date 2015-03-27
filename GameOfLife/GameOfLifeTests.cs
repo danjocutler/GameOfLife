@@ -9,13 +9,31 @@ namespace GameOfLife
     [TestFixture]
     public class CreateBoardTests
     {
+        private GameOfLifeBoard _board;
+
+        [SetUp]
+        public void Setup()
+        {
+            _board = new GameOfLifeBoard(10, 20);
+        }
+
         [Test]
         public void Board_GivenDimensions_CanBeCreated()
         {
-            var board = new GameOfLifeBoard(10, 10);
+            Assert.That(_board.Width, Is.EqualTo(10));
+            Assert.That(_board.Height, Is.EqualTo(20));
+        }
 
-            Assert.That(board.Width, Is.EqualTo(10));
-            Assert.That(board.Height, Is.EqualTo(10));
+        [Test]
+        public void Board_Created_HasRows()
+        {
+            Assert.That(_board.Rows.Count, Is.EqualTo(20));
+        }
+
+        [Test]
+        public void Board_Created_HasCells()
+        {
+           Assert.That(_board.Rows[0][0], Is.TypeOf<Cell>());
         }
     }
 }
