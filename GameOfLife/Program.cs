@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameOfLife
 {
-    class Program
+    class GameOfLife
     {
         static void Main(string[] args)
         {
