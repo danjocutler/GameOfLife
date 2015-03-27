@@ -6,16 +6,16 @@ using NUnit.Framework;
 
 namespace GameOfLife
 {
-    /// <summary>
-    /// A test class for ...
-    /// </summary>
     [TestFixture]
-    public class GameOfLifeTests
+    public class CreateBoardTests
     {
         [Test]
-        public void FirstTest()
+        public void Board_GivenDimensions_CanBeCreated()
         {
- 
+            var board = new GameOfLifeBoard(10, 10);
+
+            Assert.That(board.Width, Is.EqualTo(10));
+            Assert.That(board.Height, Is.EqualTo(10));
         }
     }
 }

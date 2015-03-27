@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\Dan\Documents\Visual Studio 2013\Projects\GameOfLife\GameOfLife\bin\Debug\GameOfLife.exe" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-03-26" time="16:00:56">
+<test-results name="C:\Users\Dan\Documents\Visual Studio 2013\Projects\GameOfLife\GameOfLife\bin\Debug\GameOfLife.exe" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-03-27" time="17:39:19">
   <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.5485" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.4\bin" machine-name="DAN-PC" user="Dan" user-domain="Dan-PC" />
   <culture-info current-culture="en-GB" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\Dan\Documents\Visual Studio 2013\Projects\GameOfLife\GameOfLife\bin\Debug\GameOfLife.exe" executed="True" result="Success" success="True" time="0.256" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\Dan\Documents\Visual Studio 2013\Projects\GameOfLife\GameOfLife\bin\Debug\GameOfLife.exe" executed="True" result="Success" success="True" time="0.094" asserts="0">
     <results>
-      <test-suite type="Namespace" name="GameOfLife" executed="True" result="Success" success="True" time="0.183" asserts="0">
+      <test-suite type="Namespace" name="GameOfLife" executed="True" result="Success" success="True" time="0.068" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="GameOfLifeTests" executed="True" result="Success" success="True" time="0.179" asserts="0">
+          <test-suite type="TestFixture" name="CreateBoardTests" executed="True" result="Success" success="True" time="0.064" asserts="0">
             <results>
-              <test-case name="GameOfLife.GameOfLifeTests.FirstTest" executed="True" result="Success" success="True" time="0.132" asserts="0" />
+              <test-case name="GameOfLife.CreateBoardTests.Board_GivenDimensions_CanBeCreated" executed="True" result="Success" success="True" time="0.048" asserts="2" />
             </results>
           </test-suite>
         </results>
