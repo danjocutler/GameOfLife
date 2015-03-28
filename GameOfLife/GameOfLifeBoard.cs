@@ -21,7 +21,7 @@ namespace GameOfLife
             GridCreation();
         }
 
-        private void GridCreation()
+        public void GridCreation()
         {
             for (int y = 0; y < Height; y++)
             {

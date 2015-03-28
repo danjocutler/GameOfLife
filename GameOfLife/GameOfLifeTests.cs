@@ -51,4 +51,16 @@ namespace GameOfLife
             }
         }
     }
+
+    [TestFixture]
+    public class CellTests
+    {
+        [Test]
+        public void Cell_Initialize_AreDead()
+        {
+            var cell = new Cell();
+
+            Assert.That(cell.IsAlive, Is.False);
+        }
+    }
 }

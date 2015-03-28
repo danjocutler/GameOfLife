@@ -7,5 +7,6 @@ namespace GameOfLife
 {
     class Cell
     {
+        public bool IsAlive { get; set; }
     }
 }
