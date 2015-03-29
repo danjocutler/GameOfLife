@@ -37,7 +37,7 @@ namespace GameOfLife
         }
 
         [Test]
-        public void Board_Created_CanBeSeen()
+        public void Board_WithDeadCells_ShowAsDashes()
         {
             // use the text output console in NUnit to
             // get a visual representation of the board
@@ -50,17 +50,16 @@ namespace GameOfLife
                 Console.WriteLine(line);
             }
         }
-    }
 
-    [TestFixture]
-    public class CellTests
-    {
         [Test]
-        public void Cell_Initialize_AreDead()
+        public void Board_WithAliveCells_ShowAsHashes()
         {
-            var cell = new Cell();
+            var cell = new List<Cell>();
+            cell.Add(new Cell { IsAlive = false});
 
-            Assert.That(cell.IsAlive, Is.False);
-        }
+            var output = _board.Render(_board);
+
+            Assert.That(output.First(), Is.EqualTo("##########"));
+        }        
     }
 }

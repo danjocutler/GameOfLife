@@ -1,23 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\Dan\Documents\Visual Studio 2013\Projects\GameOfLife\GameOfLife\bin\Debug\GameOfLife.exe" total="5" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-03-28" time="12:22:30">
+<test-results name="C:\Users\Dan\Documents\Visual Studio 2013\Projects\GameOfLife\GameOfLife\bin\Debug\GameOfLife.exe" total="6" errors="0" failures="1" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-03-29" time="14:38:07">
   <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.5485" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.4\bin" machine-name="DAN-PC" user="Dan" user-domain="Dan-PC" />
   <culture-info current-culture="en-GB" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="C:\Users\Dan\Documents\Visual Studio 2013\Projects\GameOfLife\GameOfLife\bin\Debug\GameOfLife.exe" executed="True" result="Success" success="True" time="0.126" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\Dan\Documents\Visual Studio 2013\Projects\GameOfLife\GameOfLife\bin\Debug\GameOfLife.exe" executed="True" result="Failure" success="False" time="0.156" asserts="0">
     <results>
-      <test-suite type="Namespace" name="GameOfLife" executed="True" result="Success" success="True" time="0.104" asserts="0">
+      <test-suite type="Namespace" name="GameOfLife" executed="True" result="Failure" success="False" time="0.133" asserts="0">
         <results>
-          <test-suite type="TestFixture" name="CellTests" executed="True" result="Success" success="True" time="0.045" asserts="0">
+          <test-suite type="TestFixture" name="CellTests" executed="True" result="Success" success="True" time="0.046" asserts="0">
             <results>
-              <test-case name="GameOfLife.CellTests.Cell_Initialize_AreDead" executed="True" result="Success" success="True" time="0.029" asserts="1" />
+              <test-case name="GameOfLife.CellTests.Cell_Initialize_AreDead" executed="True" result="Success" success="True" time="0.030" asserts="1" />
             </results>
           </test-suite>
-          <test-suite type="TestFixture" name="CreateBoardTests" executed="True" result="Success" success="True" time="0.053" asserts="0">
+          <test-suite type="TestFixture" name="CreateBoardTests" executed="True" result="Failure" success="False" time="0.080" asserts="0">
             <results>
-              <test-case name="GameOfLife.CreateBoardTests.Board_Created_CanBeSeen" executed="True" result="Success" success="True" time="0.021" asserts="1" />
-              <test-case name="GameOfLife.CreateBoardTests.Board_Created_HasCells" executed="True" result="Success" success="True" time="0.001" asserts="1" />
-              <test-case name="GameOfLife.CreateBoardTests.Board_Created_HasRows" executed="True" result="Success" success="True" time="0.006" asserts="1" />
+              <test-case name="GameOfLife.CreateBoardTests.Board_Created_HasCells" executed="True" result="Success" success="True" time="0.004" asserts="1" />
+              <test-case name="GameOfLife.CreateBoardTests.Board_Created_HasRows" executed="True" result="Success" success="True" time="0.019" asserts="1" />
               <test-case name="GameOfLife.CreateBoardTests.Board_GivenDimensions_CanBeCreated" executed="True" result="Success" success="True" time="0.001" asserts="2" />
+              <test-case name="GameOfLife.CreateBoardTests.Board_WithAliveCells_ShowAsHashes" executed="True" result="Failure" success="False" time="0.028" asserts="1">
+                <failure>
+                  <message><![CDATA[  String lengths are both 10. Strings differ at index 0.
+  Expected: "##########"
+  But was:  "----------"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at GameOfLife.CreateBoardTests.Board_WithAliveCells_ShowAsHashes() in c:\Users\Dan\Documents\Visual Studio 2013\Projects\GameOfLife\GameOfLife\GameOfLifeTests.cs:line 62
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case name="GameOfLife.CreateBoardTests.Board_WithDeadCells_ShowAsDashes" executed="True" result="Success" success="True" time="0.003" asserts="1" />
             </results>
           </test-suite>
         </results>

@@ -40,9 +40,12 @@ namespace GameOfLife
 
             foreach (var row in board.Rows)
             {
-                int rowLength = row.Count;
-                var print = string.Join("", Enumerable.Repeat("-", rowLength));
-                renderRow.Add(print);
+                var cellPrint = new StringBuilder();
+                foreach (var cell in row)
+                {
+                    cellPrint.Append(cell.IsAlive ? "#" : "-");
+                }
+                renderRow.Add(cellPrint.ToString());
             }
 
             return renderRow;
